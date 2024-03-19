@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Display</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.2/papaparse.min.js"></script>
+</head>
+<body>
+    <table id="csv-table">
+        <!-- Table content will be inserted here -->
+    </table>
+    <script>
+        Papa.parse("all_paper_list_240319", {
+            download: true,
+            header: true,
+            complete: function(results) {
+                var data = results.data;
+                var table = document.getElementById('csv-table');
+                // Generate table headers
+                var thead = document.createElement('thead');
+                var headerRow = document.createElement('tr');
+                Object.keys(data[0]).forEach(function(key) {
+                    var th = document.createElement('th');
+                    th.textContent = key;
+                    headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+                // Generate table rows
+                var tbody = document.createElement('tbody');
+                data.forEach(function(row) {
+                    var tr = document.createElement('tr');
+                    Object.values(row).forEach(function(value) {
+                        var td = document.createElement('td');
+                        td.textContent = value;
+                        tr.appendChild(td);
+                    });
+                    tbody.appendChild(tr);
+                });
+                table.appendChild(tbody);
+            }
+        });
+    </script>
+</body>
+</html>
