@@ -2,6 +2,25 @@
 <html>
 <head>
     <title>CSV Display</title>
+    <style>
+        /* Style the table to be full page width */
+        #csv-table {
+            width: 100%; /* Make the table full width */
+            border-collapse: collapse;
+        }
+        /* Add borders to cells for visibility */
+        #csv-table, #csv-table th, #csv-table td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px; /* Adjust padding as needed */
+        }
+        /* Column width ratios */
+        #csv-table th:nth-child(1), #csv-table td:nth-child(1) { width: 25%; }
+        #csv-table th:nth-child(2), #csv-table td:nth-child(2) { width: 40%; }
+        #csv-table th:nth-child(3), #csv-table td:nth-child(3) { width: 15%; }
+        #csv-table th:nth-child(4), #csv-table td:nth-child(4) { width: 15%; }
+        #csv-table th:nth-child(5), #csv-table td:nth-child(5) { width: 5%; }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.2/papaparse.min.js"></script>
 </head>
 <body>
