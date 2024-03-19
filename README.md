@@ -1,5 +1,10 @@
 # CVPR 2024 Papers on arXiv
 
+<p align="center" style="font-size: 2em;">
+    <strong><a href="https://robot-eyes.github.io/CVPR2024_on_arXiv/" style="text-decoration: none;"> ----->  Click Here to Explore the Accepted Papers!   <-----</a></strong>
+</p>
+
+
 Welcome to the **CVPR 2024 Papers on arXiv** repository! The [2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)](https://cvpr.thecvf.com/Conferences/2024/AcceptedPapers) has officially accepted 2,720 groundbreaking papers. With a significant number of these papers now accessible on arXiv, this repository serves as your streamlined guide to discovering the latest research insights from one of the leading conferences in computer vision.
 
 ## 🚀 Quick Access to Accepted Papers
