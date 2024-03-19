@@ -46,11 +46,19 @@
                 table.appendChild(thead);
                 // Generate table rows
                 var tbody = document.createElement('tbody');
-                data.forEach(function(row) {
+                data.forEach(function(row, rowIndex) {
                     var tr = document.createElement('tr');
-                    Object.values(row).forEach(function(value) {
+                    Object.values(row).forEach(function(value, colIndex) {
                         var td = document.createElement('td');
-                        td.textContent = value;
+                        // Check if this is the third column
+                        if (colIndex === 2) { // Remember, index is 0-based
+                            var a = document.createElement('a');
+                            a.setAttribute('href', value);
+                            a.textContent = value;
+                            td.appendChild(a);
+                        } else {
+                            td.textContent = value;
+                        }
                         tr.appendChild(td);
                     });
                     tbody.appendChild(tr);
